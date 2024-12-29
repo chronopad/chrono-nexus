@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hackthebox on Chrono Nexus</title>
+    <link>//localhost:1313/tags/hackthebox/</link>
+    <description>Recent content in Hackthebox on Chrono Nexus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 chronopad</copyright>
+    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/hackthebox/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HTB - Active</title>
+      <link>//localhost:1313/writeups/active-easy/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/writeups/active-easy/</guid>
+      <description>Writeup for Active, an easy difficulty Windows machine from HackTheBox.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/writeups/active-easy/featured.jpg" />
+    </item>
+    
+  </channel>
+</rss>
