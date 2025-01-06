@@ -11,12 +11,12 @@
     
     <item>
       <title>Iris CTF 2025</title>
-      <link>//localhost:1313/ctf/irisctf/</link>
+      <link>//localhost:1313/ctf/irisctf2025/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/ctf/irisctf/</guid>
+      <guid>//localhost:1313/ctf/irisctf2025/</guid>
       <description>Iris CTF 2025 challenge writeups.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/irisctf/featured.svg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/irisctf2025/featured.svg" />
     </item>
     
     <item>

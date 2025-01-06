@@ -234,13 +234,13 @@ q1*q2 = x + y*i + z*j + w*k​​​
 
 After all of the quaternions of `A` and `msg` are multiplied together, they are all summed into a single quaternion `sm` which is the result. Now we have to recover the value of `msg` given `A` and `sm`. If we pay a close attention, then we will notice that this is a Knapsack problem, as we are given a list of quaternions (general knapsack) `A` and the sum `sm`.  The Knapsack problem can be solved using LLL, so let's construct the matrix first. Here's how we can build the matrix `M` to use for the LLL based on [this paper](https://www.cs.sjsu.edu/faculty/stamp/papers/topics/topic16/Knapsack.pdf).
 
-![[Pasted image 20250106182359.png]]
+!![Image Description](/images/Pasted%20image%2020250106182359.png)
 
 Some elements in matrix `M` here is still in form of quaternions, so we will have to convert them to into another matrix with elements in the complex field, followed by another conversion to another matrix with elements over the integers. Only then we can use LLL to the resulting matrix.
 
-![[Pasted image 20250106200849.png]]
+!![Image Description](/images/Pasted%20image%2020250106200849.png)
 
-![[Pasted image 20250106201002.png]]
+!![Image Description](/images/Pasted%20image%2020250106201002.png)
 
 ```
 # Representation of a quaternion a + bi + cj + dk as matrix over Z
