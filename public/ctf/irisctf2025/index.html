@@ -111,7 +111,7 @@
     
     
     "mainEntityOfPage": "true",
-    "wordCount": "1479"
+    "wordCount": "1476"
   }]
   </script>
 
@@ -976,20 +976,20 @@ w = a1*​d2 ​+ b1*​c2 ​− c1*​b2 ​+ d1*​a2
 
 q1*q2 = x + y*i + z*j + w*k​​​
 </code></pre><p>After all of the quaternions of <code>A</code> and <code>msg</code> are multiplied together, they are all summed into a single quaternion <code>sm</code> which is the result. Now we have to recover the value of <code>msg</code> given <code>A</code> and <code>sm</code>. If we pay a close attention, then we will notice that this is a Knapsack problem, as we are given a list of quaternions (general knapsack) <code>A</code> and the sum <code>sm</code>.  The Knapsack problem can be solved using LLL, so let&rsquo;s construct the matrix first. Here&rsquo;s how we can build the matrix <code>M</code> to use for the LLL based on <a href="https://www.cs.sjsu.edu/faculty/stamp/papers/topics/topic16/Knapsack.pdf" target="_blank">this paper</a>.</p>
-<p>!
+<p>
     <figure>
       <img class="my-0 rounded-md" loading="lazy" src="/images/Pasted%20image%2020250106182359.png" alt="Image Description" />
       
     </figure>
 </p>
 <p>Some elements in matrix <code>M</code> here is still in form of quaternions, so we will have to convert them to into another matrix with elements in the complex field, followed by another conversion to another matrix with elements over the integers. Only then we can use LLL to the resulting matrix.</p>
-<p>!
+<p>
     <figure>
       <img class="my-0 rounded-md" loading="lazy" src="/images/Pasted%20image%2020250106200849.png" alt="Image Description" />
       
     </figure>
 </p>
-<p>!
+<p>
     <figure>
       <img class="my-0 rounded-md" loading="lazy" src="/images/Pasted%20image%2020250106201002.png" alt="Image Description" />
       
