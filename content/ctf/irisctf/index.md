@@ -1,12 +1,13 @@
 ---
-title: kittycrypt
+title: Iris CTF 2025
 date: 2025-01-06
 draft: false
-summary: "Iris CTF 2025: Classic plaintext shifted by a certain number."
-tags:
-  - classic-cipher
-category: Cryptography
+summary: Iris CTF 2025 challenge writeups.
+tags: 
+category: CTF
 ---
+#### Cryptography
+##### kittycrypt
 We are provided *main.go* and some example input output files.
 
 ```

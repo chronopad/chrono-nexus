@@ -2,25 +2,22 @@
 none = "none"
 
 [[main]]
-name = "Tags"
-pre = "hashnode"
-pageRef = "tags"
-identifier = "yehLyeqKMT"
-weight = 3
-
-[[main]]
 name = "CTF"
-pre = "ghost"
 pageRef = "ctf"
-identifier = "A8r6E340mJ"
-weight = 1
+identifier = "MF8pWZJQQR"
+weight = 9999
 
 [[main]]
 name = "HTB"
-pre = "hashnode"
 pageRef = "htb"
-identifier = "8eWWqZyTht"
-weight = 2
+identifier = "n0W2DB0V1F"
+weight = 9999
+
+[[main]]
+name = "Tags"
+pageRef = "tags"
+identifier = "sprNPzVRx4"
+weight = 9999
 
 [[footer]]
 none = "none"

@@ -11,12 +11,12 @@
     
     <item>
       <title>HTB - Active</title>
-      <link>//localhost:1313/writeups/active-easy/</link>
+      <link>//localhost:1313/htb/active-easy/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/writeups/active-easy/</guid>
+      <guid>//localhost:1313/htb/active-easy/</guid>
       <description>Writeup for Active, an easy difficulty Windows machine from HackTheBox.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/writeups/active-easy/featured.jpg" />
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/htb/active-easy/featured.jpg" />
     </item>
     
   </channel>
