@@ -2,17 +2,24 @@
 none = "none"
 
 [[main]]
-name = "Writeups"
-pre = "ghost"
-pageRef = "writeups"
-identifier = "4zpI1yOaOj"
-weight = 1
-
-[[main]]
 name = "Tags"
 pre = "hashnode"
 pageRef = "tags"
 identifier = "yehLyeqKMT"
+weight = 3
+
+[[main]]
+name = "CTF"
+pre = "ghost"
+pageRef = "ctf"
+identifier = "A8r6E340mJ"
+weight = 1
+
+[[main]]
+name = "HTB"
+pre = "hashnode"
+pageRef = "htb"
+identifier = "8eWWqZyTht"
 weight = 2
 
 [[footer]]

@@ -3,7 +3,8 @@ title: "HTB - Active"
 date: 2024-11-17
 draft: false
 summary: "Writeup for Active, an easy difficulty Windows machine from HackTheBox."
-tags: ["hackthebox", "windows", "easy"]
+category: "Machine"
+tags: ["windows", "easy"]
 ---
 
 #### Recon

@@ -10,5 +10,5 @@ isoCode = "en"
 rtl = false
 dateFormat = "2 January 2006"
 description = "Personal blog of chronopad: Writeups and more!"
-author = { image = "img/profile.jpg", name = "chronopad", bio = "pwn3d!", headline = "pwn3d!", links = [{ github = "https://github.com/chronopad" }]}
-# logo = "img/profile.jpg"
+author = { image = "img/profile.jpg", name = "chronopad", bio = "pwn3d!", headline = "pwn3d!", links = [ { github = "https://github.com/chronopad" } ] }
+# logo = "icon.png"

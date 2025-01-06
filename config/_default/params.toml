@@ -2,7 +2,7 @@ colorScheme = "autumn"
 defaultAppearance = "dark"
 defaultBackgroundImage = "/img/background.jpg"
 defaultFeaturedImage = "/img/featured.jpg"
-autoSwitchAppearance = true
+autoSwitchAppearance = false
 enableSearch = true
 enableCodeCopy = true
 replyByEmail = false
@@ -37,7 +37,7 @@ cardViewScreenWidth = false
 layoutBackgroundBlur = true
 
 [article]
-showDate = true
+showDate = false
 showViews = false
 showLikes = false
 showDateOnlyInArticle = false
@@ -56,14 +56,15 @@ seriesOpened = false
 showHeadingAnchors = true
 showPagination = true
 invertPagination = false
-showReadingTime = true
+showReadingTime = false
 showTableOfContents = true
-showTaxonomies = true
+showTaxonomies = false
 showAuthorsBadges = false
-showWordCount = true
+showWordCount = false
 showZenMode = false
 
 [list]
+showDate = false
 showHero = true
 heroStyle = "background"
 layoutBackgroundBlur = true
@@ -76,7 +77,7 @@ showTableOfContents = false
 showCards = true
 orderByWeight = false
 groupByYear = true
-cardView = false
+cardView = true
 cardViewScreenWidth = false
 constrainItemsWidth = false
 
