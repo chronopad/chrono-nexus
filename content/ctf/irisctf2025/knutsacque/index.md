@@ -3,10 +3,7 @@ title: "Crypto: knutsacque"
 date: 2025-01-06
 draft: false
 summary: Iris CTF 2025. Knapsack problem with quaternions. LLL to recover message blocks.
-tags:
-  - knapsack
-  - LLL
-  - matrix
+tags: ["knapsack", "LLL", "matrix"]
 category: Cryptography
 ---
 ##### Challenge

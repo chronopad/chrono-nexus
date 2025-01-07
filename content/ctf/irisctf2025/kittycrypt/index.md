@@ -3,8 +3,7 @@ title: "Crypto: kittycrypt"
 date: 2025-01-06
 draft: false
 summary: Iris CTF 2025. Simple character shifted by key.
-tags:
-  - classic-cipher
+tags: ["classic-cipher"]
 category: Cryptography
 ---
 ##### Challenge
