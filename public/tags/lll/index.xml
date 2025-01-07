@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LLL on Chrono Nexus</title>
+    <link>//localhost:1313/tags/lll/</link>
+    <description>Recent content in LLL on Chrono Nexus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 chronopad</copyright>
+    <lastBuildDate>Mon, 06 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/lll/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Crypto: knutsacque</title>
+      <link>//localhost:1313/ctf/irisctf2025/knutsacque/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/ctf/irisctf2025/knutsacque/</guid>
+      <description>Iris CTF 2025. Simple character shifted by key.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/irisctf2025/knutsacque/featured.svg" />
+    </item>
+    
+  </channel>
+</rss>

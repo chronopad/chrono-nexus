@@ -13,7 +13,7 @@ forgejoDefaultServer = "https://v8.next.forgejo.org"
 
 highlightCurrentMenuArea = true
 smartTOC = true
-smartTOCHideUnfocusedChildren = true
+smartTOCHideUnfocusedChildren = false
 
 [header]
 layout = "fixed"
@@ -58,7 +58,7 @@ showPagination = true
 invertPagination = false
 showReadingTime = false
 showTableOfContents = true
-showTaxonomies = false
+showTaxonomies = true
 showAuthorsBadges = false
 showWordCount = false
 showZenMode = false
@@ -92,7 +92,7 @@ showBreadcrumbs = false
 showViews = false
 showLikes = false
 showTableOfContents = false
-cardView = true
+cardView = false
 
 [term]
 showHero = true
