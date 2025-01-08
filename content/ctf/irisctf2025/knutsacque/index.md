@@ -6,7 +6,7 @@ summary: Iris CTF 2025. Knapsack problem with quaternions. LLL to recover messag
 tags: ["knapsack", "LLL", "matrix"]
 category: Cryptography
 ---
-##### Challenge
+###### Challenge
 This challenge is upsolved from [the author's writeup](https://github.com/Seraphin-/ctf/blob/master/2025/irisctf/knutsacque.md). We are provided *chal.sage* and *output.txt*.
 
 ```
@@ -91,7 +91,7 @@ q1*q2 = x + y*i + z*j + w*k​​​
 
 After all of the quaternions of `A` and `msg` are multiplied together, they are all summed into a single quaternion `sm` which is the result. Now we have to recover the value of `msg` given `A` and `sm`. 
 
-##### Solution
+###### Solution
 If we pay a close attention, then we will notice that this is a Knapsack problem, as we are given a list of quaternions (general knapsack) `A` and the sum `sm`.  The Knapsack problem can be solved using LLL, so let's construct the matrix first. Here's how we can build the matrix `M` to use for the LLL based on [this paper](https://www.cs.sjsu.edu/faculty/stamp/papers/topics/topic16/Knapsack.pdf).
 
 ![Image Description](/images/Pasted%20image%2020250106182359.png)

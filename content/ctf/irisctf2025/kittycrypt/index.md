@@ -6,7 +6,7 @@ summary: Iris CTF 2025. Simple character shifted by key.
 tags: ["classic-cipher"]
 category: Cryptography
 ---
-##### Challenge
+###### Challenge
 We are provided *main.go* and some example input output files.
 
 ```
@@ -119,7 +119,7 @@ func main() {
 
 The encryption starts by getting the encryption keys from the `getKeys()` function, which are stored in `keys` variable. The `getKeys()` function starts with generating `length` random numbers ranging from `0 - 59999`, which are then stored in the key file. The encryption works by adding the `ord()` of the current character of the message with the current key, then convert them to hex. The hex representation is then converted to the cat emojis based on their value. 
 
-##### Solution
+###### Solution
 Since we are given an example input and output, we can just get the encryption key value by subtracting the ASCII value of the output by the ASCII value of the input. We can then use the encryption key to decrypt the flag.
 
 ```

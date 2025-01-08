@@ -673,8 +673,12 @@
           <ul>
             <li>
               <ul>
-                <li><a href="#challenge">Challenge</a></li>
-                <li><a href="#solution">Solution</a></li>
+                <li>
+                  <ul>
+                    <li><a href="#challenge">Challenge</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -700,8 +704,12 @@
           <ul>
             <li>
               <ul>
-                <li><a href="#challenge">Challenge</a></li>
-                <li><a href="#solution">Solution</a></li>
+                <li>
+                  <ul>
+                    <li><a href="#challenge">Challenge</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -791,7 +799,7 @@
         <div class="article-content max-w-prose mb-20">
           
 
-<h5 class="relative group">Challenge 
+<h6 class="relative group">Challenge 
     <div id="challenge" class="anchor"></div>
     
     <span
@@ -800,7 +808,7 @@
             style="text-decoration-line: none !important;" href="#challenge" aria-label="Anchor">#</a>
     </span>        
     
-</h5>
+</h6>
 <p>This challenge is upsolved from <a href="https://github.com/Seraphin-/ctf/blob/master/2025/irisctf/knutsacque.md" target="_blank">the author&rsquo;s writeup</a>. We are provided <em>chal.sage</em> and <em>output.txt</em>.</p>
 <pre tabindex="0"><code># chal.sage
 import secrets
@@ -867,7 +875,7 @@ q1*q2 = x + y*i + z*j + w*k​​​
 </code></pre><p>After all of the quaternions of <code>A</code> and <code>msg</code> are multiplied together, they are all summed into a single quaternion <code>sm</code> which is the result. Now we have to recover the value of <code>msg</code> given <code>A</code> and <code>sm</code>.</p>
 
 
-<h5 class="relative group">Solution 
+<h6 class="relative group">Solution 
     <div id="solution" class="anchor"></div>
     
     <span
@@ -876,7 +884,7 @@ q1*q2 = x + y*i + z*j + w*k​​​
             style="text-decoration-line: none !important;" href="#solution" aria-label="Anchor">#</a>
     </span>        
     
-</h5>
+</h6>
 <p>If we pay a close attention, then we will notice that this is a Knapsack problem, as we are given a list of quaternions (general knapsack) <code>A</code> and the sum <code>sm</code>.  The Knapsack problem can be solved using LLL, so let&rsquo;s construct the matrix first. Here&rsquo;s how we can build the matrix <code>M</code> to use for the LLL based on <a href="https://www.cs.sjsu.edu/faculty/stamp/papers/topics/topic16/Knapsack.pdf" target="_blank">this paper</a>.</p>
 <p>
     <figure>

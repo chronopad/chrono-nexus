@@ -655,8 +655,12 @@
           <ul>
             <li>
               <ul>
-                <li><a href="#challenge">Challenge</a></li>
-                <li><a href="#solution">Solution</a></li>
+                <li>
+                  <ul>
+                    <li><a href="#challenge">Challenge</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -682,8 +686,12 @@
           <ul>
             <li>
               <ul>
-                <li><a href="#challenge">Challenge</a></li>
-                <li><a href="#solution">Solution</a></li>
+                <li>
+                  <ul>
+                    <li><a href="#challenge">Challenge</a></li>
+                    <li><a href="#solution">Solution</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -773,7 +781,7 @@
         <div class="article-content max-w-prose mb-20">
           
 
-<h5 class="relative group">Challenge 
+<h6 class="relative group">Challenge 
     <div id="challenge" class="anchor"></div>
     
     <span
@@ -782,7 +790,7 @@
             style="text-decoration-line: none !important;" href="#challenge" aria-label="Anchor">#</a>
     </span>        
     
-</h5>
+</h6>
 <p>We are provided <em>main.go</em> and some example input output files.</p>
 <pre tabindex="0"><code># main.go
 package main
@@ -891,7 +899,7 @@ func main() {
 </code></pre><p>The encryption starts by getting the encryption keys from the <code>getKeys()</code> function, which are stored in <code>keys</code> variable. The <code>getKeys()</code> function starts with generating <code>length</code> random numbers ranging from <code>0 - 59999</code>, which are then stored in the key file. The encryption works by adding the <code>ord()</code> of the current character of the message with the current key, then convert them to hex. The hex representation is then converted to the cat emojis based on their value.</p>
 
 
-<h5 class="relative group">Solution 
+<h6 class="relative group">Solution 
     <div id="solution" class="anchor"></div>
     
     <span
@@ -900,7 +908,7 @@ func main() {
             style="text-decoration-line: none !important;" href="#solution" aria-label="Anchor">#</a>
     </span>        
     
-</h5>
+</h6>
 <p>Since we are given an example input and output, we can just get the encryption key value by subtracting the ASCII value of the output by the ASCII value of the input. We can then use the encryption key to decrypt the flag.</p>
 <pre tabindex="0"><code># solve.py
 charset = {
@@ -1056,6 +1064,26 @@ print(bytes(flag))
           
         </span>
         <span>
+          
+            <a class="flex text-right group ml-3" href="/ctf/backdoorctf2023/knapsack/">
+              <span class="flex flex-col">
+                <span
+                  class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+                  >Crypto: Knapsack</span
+                >
+                <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+                  
+                </span>
+              </span>
+              <span
+                class="ml-3 text-neutral-700 group-hover:text-primary-600 ltr:inline rtl:hidden dark:text-neutral dark:group-hover:text-primary-400"
+                >&rarr;</span
+              >
+              <span
+                class="mr-3 text-neutral-700 group-hover:text-primary-600 ltr:hidden rtl:inline dark:text-neutral dark:group-hover:text-primary-400"
+                >&larr;</span
+              >
+            </a>
           
         </span>
       </div>
