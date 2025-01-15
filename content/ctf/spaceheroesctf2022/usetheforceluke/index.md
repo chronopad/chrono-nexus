@@ -86,3 +86,7 @@ malloc(next(libc.search(b"/bin/sh")), b"") # Honestly more reliable
 
 io.interactive()
 ```
+
+Link, resources:
+- https://github.com/knittingirl/CTF-Writeups/tree/main/pwn_challs/space_heroes_22/Use%20the%20Force%2C%20Luke
+- https://mohamed-fakroud.gitbook.io/red-teamings-dojo/binary-exploitation/heap-house-of-force
