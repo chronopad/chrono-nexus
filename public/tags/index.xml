@@ -7,7 +7,37 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 chronopad</copyright>
-    <lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Active-Directory</title>
+      <link>//localhost:1313/tags/active-directory/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/tags/active-directory/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Hard</title>
+      <link>//localhost:1313/tags/hard/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/tags/hard/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>//localhost:1313/tags/windows/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/tags/windows/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Heap</title>
@@ -65,26 +95,6 @@
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
       
       <guid>//localhost:1313/tags/classic-cipher/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Easy</title>
-      <link>//localhost:1313/tags/easy/</link>
-      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/tags/easy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>//localhost:1313/tags/windows/</link>
-      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/tags/windows/</guid>
       <description></description>
       
     </item>

@@ -7,16 +7,16 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 chronopad</copyright>
-    <lastBuildDate>Sun, 17 Nov 2024 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/htb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/htb/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>HTB - Active</title>
-      <link>//localhost:1313/htb/active-easy/</link>
-      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      <title>Blackfield</title>
+      <link>//localhost:1313/htb/blackfield/</link>
+      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/htb/active-easy/</guid>
-      <description>Writeup for Active, an easy difficulty Windows machine from HackTheBox.</description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/htb/active-easy/featured.jpg" />
+      <guid>//localhost:1313/htb/blackfield/</guid>
+      <description>HTB Hard Difficulty Windows Machine. AD.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/htb/blackfield/featured.svg" />
     </item>
     
   </channel>

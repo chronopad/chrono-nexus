@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Windows on Chrono Nexus</title>
-    <link>//localhost:1313/tags/windows/</link>
-    <description>Recent content in Windows on Chrono Nexus</description>
+    <title>Hard on Chrono Nexus</title>
+    <link>//localhost:1313/tags/hard/</link>
+    <description>Recent content in Hard on Chrono Nexus</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 chronopad</copyright>
-    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/hard/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Blackfield</title>
