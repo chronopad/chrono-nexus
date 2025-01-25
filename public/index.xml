@@ -10,7 +10,7 @@
     <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Blackfield</title>
+      <title>HTB: Blackfield</title>
       <link>//localhost:1313/htb/blackfield/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
       
@@ -20,7 +20,7 @@
     </item>
     
     <item>
-      <title>Pwn: Use the Force, Luke</title>
+      <title>Pwn: Use the Force, ...</title>
       <link>//localhost:1313/ctf/spaceheroesctf2022/usetheforceluke/</link>
       <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
       

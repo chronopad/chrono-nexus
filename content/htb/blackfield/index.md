@@ -1,5 +1,5 @@
 ---
-title: Blackfield
+title: "HTB: Blackfield"
 date: 2025-01-25
 draft: false
 summary: HTB Hard Difficulty Windows Machine. AD.

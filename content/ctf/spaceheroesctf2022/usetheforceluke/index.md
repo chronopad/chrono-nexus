@@ -1,5 +1,5 @@
 ---
-title: "Pwn: Use the Force, Luke"
+title: "Pwn: Use the Force, ..."
 date: 2025-01-15
 draft: false
 summary: Space Heroes CTF 2022. House of Force heap exploitation.

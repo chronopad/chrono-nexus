@@ -11,6 +11,7 @@ disableTextInHeader = false
 giteaDefaultServer = "https://git.fsfe.org"
 forgejoDefaultServer = "https://v8.next.forgejo.org"
 
+mainSections = ["htb", "ctf"]
 highlightCurrentMenuArea = true
 smartTOC = true
 smartTOCHideUnfocusedChildren = false
@@ -30,7 +31,7 @@ layout = "background"
 homepageImage = "/img/background.jpg"
 showRecent = true
 showRecentItems = 6
-showMoreLink = true
+showMoreLink = false
 showMoreLinkDest = "htb"
 cardView = true
 cardViewScreenWidth = false
