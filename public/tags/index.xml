@@ -20,26 +20,6 @@
     </item>
     
     <item>
-      <title>Easy</title>
-      <link>//localhost:1313/tags/easy/</link>
-      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/tags/easy/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>//localhost:1313/tags/linux/</link>
-      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
-      
-      <guid>//localhost:1313/tags/linux/</guid>
-      <description></description>
-      
-    </item>
-    
-    <item>
       <title>Medium</title>
       <link>//localhost:1313/tags/medium/</link>
       <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>

@@ -1,6 +1,6 @@
 ---
 title: "HTB: Sau"
-date: 2025-02-05
+date: 2025-02-06
 draft: false
 summary: HTB Easy Difficulty Linux Machine.
 tags:
