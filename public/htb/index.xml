@@ -20,6 +20,16 @@
     </item>
     
     <item>
+      <title>HTB: Sau</title>
+      <link>//localhost:1313/htb/sau/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/htb/sau/</guid>
+      <description>HTB Easy Difficulty Linux Machine.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/htb/sau/featured.svg" />
+    </item>
+    
+    <item>
       <title>HTB: Blackfield</title>
       <link>//localhost:1313/htb/blackfield/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>

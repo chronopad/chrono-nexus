@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Easy on Chrono Nexus</title>
+    <link>//localhost:1313/tags/easy/</link>
+    <description>Recent content in Easy on Chrono Nexus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2025 chronopad</copyright>
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/easy/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>HTB: Sau</title>
+      <link>//localhost:1313/htb/sau/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/htb/sau/</guid>
+      <description>HTB Easy Difficulty Linux Machine.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/htb/sau/featured.svg" />
+    </item>
+    
+  </channel>
+</rss>
