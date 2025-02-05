@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>© 2025 chronopad</copyright>
-    <lastBuildDate>Thu, 06 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 05 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>HTB: Monteverde</title>
@@ -17,6 +17,16 @@
       <guid>//localhost:1313/htb/monteverde/</guid>
       <description>HTB Medium Difficulty Windows Machine. AD.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/htb/monteverde/featured.svg" />
+    </item>
+    
+    <item>
+      <title>HTB: Sau</title>
+      <link>//localhost:1313/htb/sau/</link>
+      <pubDate>Wed, 05 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/htb/sau/</guid>
+      <description>HTB Easy Difficulty Linux Machine.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/htb/sau/featured.svg" />
     </item>
     
     <item>
