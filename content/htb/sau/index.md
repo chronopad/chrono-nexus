@@ -116,9 +116,9 @@ Nmap done: 1 IP address (1 host up) scanned in 172.28 seconds
 ###### Website enumeration
 The website at port 55555 appears to be providing a service where we can create a basket that can receive and log the requests made to the basket, something like webhook.site and requestcatcher.com.
 
-![[Pasted image 20250205204021.png]]
+![Image Description](/images/Pasted%20image%2020250205204021.png)
 
-![[Pasted image 20250205203940.png]]
+![Image Description](/images/Pasted%20image%2020250205203940.png)
 
 #### Shell as puma
 ###### SSRF to RCE

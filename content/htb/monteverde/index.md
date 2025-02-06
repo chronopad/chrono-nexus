@@ -306,7 +306,7 @@ INFO: Compressing output into 20250204223607_bloodhound.zip
 
 I uploaded the collected data to **BloodHound** and queried for "Shortest Path to Domain Admins". Found that `mhope` has `CanPSRemote`, which means we can connect to the machine as `mhope`.
 
-![[Pasted image 20250204224248.png]]
+![Image Description](/images/Pasted%20image%2020250204224248.png)
 
 I also enumerate some information available for `mhope`, and found that this user is part of the `Azure Admins` domain group.
 
