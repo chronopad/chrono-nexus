@@ -2,13 +2,13 @@
 none = "none"
 
 [[main]]
-name = "CTF"
+name = "CTF Writeups"
 pageRef = "ctf"
 identifier = "MF8pWZJQQR"
 weight = 9999
 
 [[main]]
-name = "HTB"
+name = "HTB Writeups"
 pageRef = "htb"
 identifier = "n0W2DB0V1F"
 weight = 9999

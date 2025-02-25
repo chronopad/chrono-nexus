@@ -8,7 +8,7 @@ enableCodeCopy = true
 replyByEmail = false
 
 disableImageOptimization = false
-disableTextInHeader = false
+disableTextInHeader = true
 
 smartTOC = true
 # smartTOCHideUnfocusedChildren = false
