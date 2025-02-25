@@ -1,0 +1,33 @@
+:root {   --color-neutral: 255, 255, 255;
+    --color-neutral-50:     255, 255, 255;  /* Pure White */
+    --color-neutral-100:    250, 245, 240;  /* Soft Warm White */
+    --color-neutral-200:    236, 230, 220;  /* Light Mushroom */
+    --color-neutral-300:    218, 205, 185;  /* Warm Oat */
+    --color-neutral-400:    198, 178, 155;  /* Muted Sand */
+    --color-neutral-500:    175, 148, 125;  /* Autumn Taupe */
+    --color-neutral-600:    142, 118, 100;  /* Weathered Clay */
+    --color-neutral-700:    110, 89, 75;    /* Deep Chestnut Gray */
+    --color-neutral-800:    75, 61, 50;     /* Cocoa Brown */
+    --color-neutral-900:    40, 32, 25;     /* Charcoal Espresso */
+--color-primary-50:     255,255,255;
+--color-primary-100:    255,255,255;
+--color-primary-200:    255,240,212;
+--color-primary-300:    255,213,136;
+--color-primary-400:    255,187,59;
+--color-primary-500:    238,155,0;
+--color-primary-600:    197,128,0;
+--color-primary-700:    156,102,0;
+--color-primary-800:    116,75,0;
+--color-primary-900:    75,49,0;
+--color-secondary-50:     255, 255, 255;   /* Pure White */
+--color-secondary-100:    255, 245, 235;   /* Soft Warm Ivory */
+--color-secondary-200:    250, 210, 180;   /* Faded Pumpkin */
+--color-secondary-300:    240, 170, 120;   /* Golden Apricot */
+--color-secondary-400:    225, 125, 70;    /* Burnt Orange */
+--color-secondary-500:    195, 90, 40;     /* Rust Red */
+--color-secondary-600:    160, 70, 30;     /* Deep Copper */
+--color-secondary-700:    125, 50, 25;     /* Autumn Maple */
+--color-secondary-800:    90, 35, 20;      /* Redwood Brown */
+--color-secondary-900:    50, 20, 10;      /* Deep Mahogany */
+
+}
