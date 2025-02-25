@@ -20,6 +20,16 @@
     </item>
     
     <item>
+      <title>Crypto: Knapsack</title>
+      <link>//localhost:1313/test/backdoorctf2023/knapsack/</link>
+      <pubDate>Wed, 08 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/test/backdoorctf2023/knapsack/</guid>
+      <description>Backdoor CTF 2023. Classic subset sum / knapsack problem solved with LLL.</description>
+      
+    </item>
+    
+    <item>
       <title>Crypto: knutsacque</title>
       <link>//localhost:1313/ctf/irisctf2025/knutsacque/</link>
       <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
@@ -27,6 +37,16 @@
       <guid>//localhost:1313/ctf/irisctf2025/knutsacque/</guid>
       <description>Iris CTF 2025. Knapsack problem with quaternions. LLL to recover message blocks.</description>
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/irisctf2025/knutsacque/featured.svg" />
+    </item>
+    
+    <item>
+      <title>Crypto: knutsacque</title>
+      <link>//localhost:1313/test/irisctf2025/knutsacque/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/test/irisctf2025/knutsacque/</guid>
+      <description>Iris CTF 2025. Knapsack problem with quaternions. LLL to recover message blocks.</description>
+      
     </item>
     
   </channel>

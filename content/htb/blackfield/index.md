@@ -352,7 +352,7 @@ Info: Establishing connection to remote endpoint
 *Evil-WinRM* PS C:\Users\svc_backup\Documents>
 ```
 
-#### Shell as system
+#### Shell as administrator
 ###### Shell enumeration
 Remember that this user is a member of the `Backup Operators` group, which must mean that this user has `SeBackupPrivilege`. Let's quickly verify it.
 

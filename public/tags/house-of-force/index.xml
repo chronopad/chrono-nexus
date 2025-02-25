@@ -19,5 +19,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/spaceheroesctf2022/usetheforceluke/featured.svg" />
     </item>
     
+    <item>
+      <title>Pwn: Use the Force, ...</title>
+      <link>//localhost:1313/test/spaceheroesctf2022/usetheforceluke/</link>
+      <pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/test/spaceheroesctf2022/usetheforceluke/</guid>
+      <description>Space Heroes CTF 2022. House of Force heap exploitation.</description>
+      
+    </item>
+    
   </channel>
 </rss>

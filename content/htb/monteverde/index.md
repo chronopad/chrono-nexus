@@ -327,7 +327,7 @@ Info: Establishing connection to remote endpoint
 *Evil-WinRM* PS C:\Users\mhope\Documents>
 ```
 
-#### Shell as system
+#### Shell as administrator
 ###### Shell enumeration
 I run `whoami /all` to list all the information about the current user `mhope`. Rediscovered that this user is a part of the `Azure Admins` group, which should be interesting.
 

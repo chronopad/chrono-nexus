@@ -19,5 +19,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/irisctf2025/kittycrypt/featured.svg" />
     </item>
     
+    <item>
+      <title>Crypto: kittycrypt</title>
+      <link>//localhost:1313/test/irisctf2025/kittycrypt/</link>
+      <pubDate>Mon, 06 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/test/irisctf2025/kittycrypt/</guid>
+      <description>Iris CTF 2025. Simple character shifted by key.</description>
+      
+    </item>
+    
   </channel>
 </rss>
