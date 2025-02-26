@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cryptography on Chrono Nexus</title>
+    <link>//localhost:1313/tags/cryptography/</link>
+    <description>Recent content in Cryptography on Chrono Nexus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2025 - the one and only chronopad</copyright>
+    <lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/cryptography/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ARA CTF 6.0 2025 Finals: a2s 3c</title>
+      <link>//localhost:1313/ctf/aractf2025/a2s_3c/</link>
+      <pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/ctf/aractf2025/a2s_3c/</guid>
+      <description>Differential Cryptanalysis to recover encryption key on reduced round AES.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/aractf2025/a2s_3c/featured.svg" />
+    </item>
+    
+  </channel>
+</rss>

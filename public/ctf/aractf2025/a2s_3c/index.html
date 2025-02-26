@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth" data-default-appearance="dark"
+  data-auto-appearance="false"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  
+  <meta http-equiv="content-language" content="en" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>ARA CTF 6.0 2025 Finals: a2s 3c &middot; Chrono Nexus</title>
+  <meta name="title" content="ARA CTF 6.0 2025 Finals: a2s 3c &middot; Chrono Nexus" />
+  
+  <meta name="description" content="Differential Cryptanalysis to recover encryption key on reduced round AES." />
+  <meta name="keywords" content="cryptography, AES, cryptanalysis, " />
+  
+  
+  <link rel="canonical" href="//localhost:1313/ctf/aractf2025/a2s_3c/" />
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <link type="text/css" rel="stylesheet" href="/css/main.bundle.min.0b3475412488234f4894e9e15d095144a8e8c68726961127e4a992f5bca700799b6e2f0e07809dc80c91193568f86366a6f0b877a8a9f549edfe6bca9f1d7ca4.css"
+    integrity="sha512-CzR1QSSII09IlOnhXQlRRKjoxocmlhEn5KmS9bynAHmbbi8OB4CdyAyRGTVo&#43;GNmpvC4d6ip9Unt/mvKnx18pA==" />
+  
+  
+  <script type="text/javascript" src="/js/appearance.min.516a16745bea5a9bd011138d254cc0fd3973cd55ce6e15f3dec763e7c7c2c7448f8fe7b54cca811cb821b0c7e12cd161caace1dd794ac3d34d40937cbcc9ee12.js"
+    integrity="sha512-UWoWdFvqWpvQERONJUzA/TlzzVXObhXz3sdj58fCx0SPj&#43;e1TMqBHLghsMfhLNFhyqzh3XlKw9NNQJN8vMnuEg=="></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script defer type="text/javascript" id="script-bundle" src="/js/main.bundle.min.a2d78d78672e549fbfc972ece871725b5478ba0b65708dda20cb97ab80a865eae6d247e1b05a4aec6ebbf78647ec3233bad8b2609ed98eee53cd58aa17128bc7.js"
+    integrity="sha512-oteNeGcuVJ&#43;/yXLs6HFyW1R4ugtlcI3aIMuXq4CoZerm0kfhsFpK7G6794ZH7DIzutiyYJ7Zju5TzViqFxKLxw==" data-copy="" data-copied=""></script>
+  
+  
+  
+  <script src="/lib/zoom/zoom.min.37d2094687372da3f7343a221a470f6b8806f7891aa46a5a03966af7f0ebd38b9fe536cb154e6ad28f006d184b294525a7c4054b6bbb4be62d8b453b42db99bd.js" integrity="sha512-N9IJRoc3LaP3NDoiGkcPa4gG94kapGpaA5Zq9/Dr04uf5TbLFU5q0o8AbRhLKUUlp8QFS2u7S&#43;Yti0U7QtuZvQ=="></script>
+  
+  
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="//localhost:1313/ctf/aractf2025/a2s_3c/">
+  <meta property="og:site_name" content="Chrono Nexus">
+  <meta property="og:title" content="ARA CTF 6.0 2025 Finals: a2s 3c">
+  <meta property="og:description" content="Differential Cryptanalysis to recover encryption key on reduced round AES.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="ctf">
+    <meta property="article:published_time" content="2025-02-26T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-02-26T00:00:00+00:00">
+    <meta property="article:tag" content="Cryptography">
+    <meta property="article:tag" content="AES">
+    <meta property="article:tag" content="Cryptanalysis">
+    <meta property="og:image" content="//localhost:1313/ctf/aractf2025/a2s_3c/featured.svg">
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="//localhost:1313/ctf/aractf2025/a2s_3c/featured.svg">
+  <meta name="twitter:title" content="ARA CTF 6.0 2025 Finals: a2s 3c">
+  <meta name="twitter:description" content="Differential Cryptanalysis to recover encryption key on reduced round AES.">
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "CTF Writeups",
+    "name": "ARA CTF 6.0 2025 Finals: a2s 3c",
+    "headline": "ARA CTF 6.0 2025 Finals: a2s 3c",
+    
+    "abstract": "Differential Cryptanalysis to recover encryption key on reduced round AES.",
+    "inLanguage": "en",
+    "url" : "\/\/localhost:1313\/ctf\/aractf2025\/a2s_3c\/",
+    "author" : {
+      "@type": "Person",
+      "name": "chronopad"
+    },
+    "copyrightYear": "2025",
+    "dateCreated": "2025-02-26T00:00:00\u002b00:00",
+    "datePublished": "2025-02-26T00:00:00\u002b00:00",
+    
+    "dateModified": "2025-02-26T00:00:00\u002b00:00",
+    
+    "keywords": ["cryptography","AES","cryptanalysis"],
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "1564"
+  }]
+  </script>
+
+
+  
+  
+  <meta name="author" content="chronopad" />
+  
+  
+  
+  <link href="https://github.com/chronopad" rel="me" />
+  
+  
+  
+  
+
+<script src="/lib/jquery/jquery.slim.min.b0dca576e87d7eaa5850ae4e61759c065786cdb6489d68fcc82240539eebd5da522bdb4fda085ffd245808c8fe2acb2516408eb774ef26b5f6015fc6737c0ea8.js" integrity="sha512-sNylduh9fqpYUK5OYXWcBleGzbZInWj8yCJAU57r1dpSK9tP2ghf/SRYCMj&#43;KsslFkCOt3TvJrX2AV/Gc3wOqA=="></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  <meta name="theme-color"/>
+  
+  
+</head>
+<body
+  class="flex flex-col h-screen px-6 m-auto text-lg leading-7 max-w-7xl bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32 scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600">
+  <div id="the-top" class="absolute flex self-center">
+    <a class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+      href="#main-content"><span
+        class="font-bold text-primary-600 ltr:pr-2 rtl:pl-2 dark:text-primary-400">&darr;</span>Skip to main content</a>
+  </div>
+  
+  
+  <div class="min-h-[148px]"></div>
+<div class="fixed inset-x-0 pl-[24px] pr-[24px]" style="z-index:100">
+  <div id="menu-blur" class="absolute opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl shadow-2xl"></div>
+  <div class="relative max-w-[64rem] ml-auto mr-auto">
+    <div style="padding-left:0;padding-right:0;padding-top:2px;padding-bottom:3px"
+    class="main-menu flex items-center justify-between px-4 py-6 sm:px-6 md:justify-start space-x-3">
+    
+    
+    
+    <div>
+        <a href="/" class="flex">
+            <span class="sr-only">Chrono Nexus</span>
+
+            
+            <span class="logo object-scale-down object-left nozoom">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" zoomAndPan="magnify" viewBox="0 0 675 675.000002" height="900" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/></defs><g fill="#ffffff" fill-opacity="1"><g transform="translate(64.22021, 408.441123)"><g><path d="M 144.375 -129.953125 C 140.21875 -129.828125 137.164062 -128.953125 135.21875 -127.328125 C 133.269531 -125.703125 132.035156 -123.625 131.515625 -121.09375 C 130.992188 -118.5625 130.601562 -114.828125 130.34375 -109.890625 L 130.15625 -106 L 124.703125 2.140625 L 115.34375 2.140625 L 35.65625 -111.640625 L 35.265625 -111.640625 L 32.15625 -27.078125 C 32.019531 -25.785156 31.953125 -23.90625 31.953125 -21.4375 C 31.691406 -15.195312 31.300781 -10.648438 30.78125 -7.796875 L 44.8125 -8.578125 L 44.421875 0 L 8.765625 0 L 8.96875 -6.4375 C 17.664062 -6.4375 22.210938 -11.566406 22.609375 -21.828125 L 27.859375 -128.59375 L 14.8125 -127.8125 L 15.203125 -136.390625 L 38.390625 -136.390625 L 116.71875 -24.9375 L 117.09375 -24.9375 L 121.1875 -114.5625 C 121.582031 -120.925781 122.039062 -125.601562 122.5625 -128.59375 L 108.53125 -127.8125 L 108.921875 -136.390625 L 144.765625 -136.390625 Z M 144.375 -129.953125 "/></g></g></g><g fill="#ffffff" fill-opacity="1"><g transform="translate(212.686147, 408.441123)"><g><path d="M 54.953125 -99.5625 C 62.742188 -99.5625 69.234375 -97.742188 74.421875 -94.109375 C 79.617188 -90.472656 82.21875 -84.820312 82.21875 -77.15625 C 82.21875 -67.539062 76.4375 -60.070312 64.875 -54.75 C 53.320312 -49.425781 39.945312 -45.921875 24.75 -44.234375 C 24.75 -32.023438 26.566406 -22.863281 30.203125 -16.75 C 33.835938 -10.644531 39.421875 -7.59375 46.953125 -7.59375 C 52.929688 -7.59375 58.710938 -9.570312 64.296875 -13.53125 C 69.878906 -17.5 74.75 -23.378906 78.90625 -31.171875 L 85.34375 -27.46875 C 79.882812 -17.207031 73.773438 -9.707031 67.015625 -4.96875 C 60.265625 -0.226562 52.472656 2.140625 43.640625 2.140625 C 31.691406 2.140625 22.695312 -1.59375 16.65625 -9.0625 C 10.613281 -16.53125 7.59375 -26.820312 7.59375 -39.9375 C 7.59375 -50.457031 9.378906 -60.234375 12.953125 -69.265625 C 16.523438 -78.296875 21.882812 -85.601562 29.03125 -91.1875 C 36.175781 -96.769531 44.816406 -99.5625 54.953125 -99.5625 Z M 52.21875 -92.9375 C 43.90625 -92.9375 37.472656 -88.910156 32.921875 -80.859375 C 28.378906 -72.804688 25.71875 -62.9375 24.9375 -51.25 C 36.238281 -52.800781 45.914062 -55.914062 53.96875 -60.59375 C 62.019531 -65.269531 66.046875 -71.113281 66.046875 -78.125 C 66.046875 -82.414062 64.84375 -85.957031 62.4375 -88.75 C 60.039062 -91.539062 56.632812 -92.9375 52.21875 -92.9375 Z M 52.21875 -92.9375 "/></g></g></g><g fill="#ffffff" fill-opacity="1"><g transform="translate(305.623529, 408.441123)"><g><path d="M 89.828125 -99.5625 C 93.203125 -99.5625 95.796875 -98.679688 97.609375 -96.921875 C 99.429688 -95.171875 100.34375 -92.867188 100.34375 -90.015625 C 100.34375 -87.804688 99.5625 -85.859375 98 -84.171875 C 96.445312 -82.484375 94.566406 -81.640625 92.359375 -81.640625 C 89.890625 -81.640625 88.101562 -82.15625 87 -83.1875 C 85.894531 -84.226562 84.691406 -85.660156 83.390625 -87.484375 C 76.242188 -86.441406 68.0625 -74.492188 58.84375 -51.640625 L 60.203125 -48.125 C 65.535156 -34.351562 69.953125 -24.515625 73.453125 -18.609375 C 76.960938 -12.703125 80.273438 -9.75 83.390625 -9.75 C 88.066406 -9.75 91.378906 -14.878906 93.328125 -25.140625 L 98.78125 -24.359375 C 96.445312 -6.691406 89.953125 2.140625 79.296875 2.140625 C 74.878906 2.140625 71.304688 1.132812 68.578125 -0.875 C 65.859375 -2.882812 63.097656 -6.648438 60.296875 -12.171875 C 57.503906 -17.691406 53.644531 -26.753906 48.71875 -39.359375 L 48.515625 -39.359375 C 44.484375 -27.410156 40.519531 -18.414062 36.625 -12.375 C 32.726562 -6.332031 29.125 -2.398438 25.8125 -0.578125 C 22.5 1.234375 18.894531 2.140625 15 2.140625 C 11.363281 2.140625 8.441406 1.234375 6.234375 -0.578125 C 4.023438 -2.398438 2.921875 -4.804688 2.921875 -7.796875 C 2.921875 -10.390625 3.695312 -12.53125 5.25 -14.21875 C 6.8125 -15.90625 8.695312 -16.75 10.90625 -16.75 C 15.457031 -16.75 17.925781 -14.085938 18.3125 -8.765625 C 26.238281 -7.078125 35.070312 -20.519531 44.8125 -49.09375 C 42.21875 -56.113281 40.53125 -60.789062 39.75 -63.125 C 36.113281 -73 33.414062 -79.5625 31.65625 -82.8125 C 29.90625 -86.0625 27.734375 -87.6875 25.140625 -87.6875 C 19.160156 -87.6875 15.847656 -81.316406 15.203125 -68.578125 L 9.546875 -68.390625 C 9.546875 -75.921875 11.070312 -83 14.125 -89.625 C 17.175781 -96.25 22.535156 -99.5625 30.203125 -99.5625 C 34.097656 -99.5625 37.242188 -98.519531 39.640625 -96.4375 C 42.046875 -94.363281 44.03125 -91.539062 45.59375 -87.96875 C 47.15625 -84.394531 49.234375 -78.84375 51.828125 -71.3125 C 52.609375 -68.582031 53.773438 -65.207031 55.328125 -61.1875 L 55.53125 -61.1875 C 61.507812 -76.125 67.453125 -86.253906 73.359375 -91.578125 C 79.265625 -96.898438 84.753906 -99.5625 89.828125 -99.5625 Z M 89.828125 -99.5625 "/></g></g></g><g fill="#ffffff" fill-opacity="1"><g transform="translate(411.809787, 408.441123)"><g><path d="M 25.921875 -99.5625 C 31.109375 -99.5625 35.035156 -97.9375 37.703125 -94.6875 C 40.367188 -91.445312 41.703125 -86.773438 41.703125 -80.671875 C 41.703125 -75.992188 40.660156 -66.25 38.578125 -51.4375 C 38.453125 -50.269531 37.867188 -45.882812 36.828125 -38.28125 C 35.785156 -30.6875 35.265625 -24.359375 35.265625 -19.296875 C 35.265625 -16.171875 35.945312 -13.34375 37.3125 -10.8125 C 38.675781 -8.28125 41.046875 -7.015625 44.421875 -7.015625 C 50.140625 -7.015625 55.851562 -11.332031 61.5625 -19.96875 C 67.28125 -28.601562 71.988281 -39.222656 75.6875 -51.828125 C 79.394531 -64.429688 81.25 -76.1875 81.25 -87.09375 C 81.25 -89.5625 81.117188 -93.003906 80.859375 -97.421875 L 97.234375 -97.421875 C 97.359375 -96.253906 97.421875 -94.566406 97.421875 -92.359375 C 97.421875 -89.242188 97.09375 -84.4375 96.4375 -77.9375 C 95.789062 -71.445312 94.820312 -63.003906 93.53125 -52.609375 L 91.578125 -36.4375 C 91.441406 -34.75 91.113281 -31.628906 90.59375 -27.078125 C 90.082031 -22.535156 89.828125 -18.960938 89.828125 -16.359375 C 89.828125 -10.648438 91.578125 -7.796875 95.078125 -7.796875 C 97.546875 -7.796875 100.078125 -9.320312 102.671875 -12.375 C 105.273438 -15.425781 107.488281 -20.132812 109.3125 -26.5 L 114.765625 -25.328125 C 114.109375 -21.691406 112.707031 -17.726562 110.5625 -13.4375 C 108.425781 -9.15625 105.570312 -5.488281 102 -2.4375 C 98.425781 0.613281 94.238281 2.140625 89.4375 2.140625 C 84.363281 2.140625 80.59375 0.582031 78.125 -2.53125 C 75.664062 -5.644531 74.4375 -9.929688 74.4375 -15.390625 C 74.4375 -21.109375 75.601562 -29.8125 77.9375 -41.5 L 77.359375 -41.5 C 71.117188 -24.738281 65.140625 -13.273438 59.421875 -7.109375 C 53.710938 -0.941406 47.414062 2.140625 40.53125 2.140625 C 33.25 2.140625 27.890625 -0.226562 24.453125 -4.96875 C 21.015625 -9.707031 19.296875 -15.78125 19.296875 -23.1875 C 19.296875 -28.769531 19.617188 -34.421875 20.265625 -40.140625 C 20.910156 -45.859375 21.882812 -52.742188 23.1875 -60.796875 C 23.445312 -62.222656 23.898438 -65.238281 24.546875 -69.84375 C 25.203125 -74.457031 25.53125 -78.066406 25.53125 -80.671875 C 25.53125 -83.648438 25.171875 -85.921875 24.453125 -87.484375 C 23.734375 -89.046875 22.335938 -89.828125 20.265625 -89.828125 C 17.921875 -89.828125 15.515625 -88.300781 13.046875 -85.25 C 10.585938 -82.195312 8.445312 -77.421875 6.625 -70.921875 L 1.171875 -72.09375 C 2.335938 -78.457031 5.03125 -84.625 9.25 -90.59375 C 13.476562 -96.570312 19.035156 -99.5625 25.921875 -99.5625 Z M 25.921875 -99.5625 "/></g></g></g><g fill="#ffffff" fill-opacity="1"><g transform="translate(527.348231, 408.441123)"><g><path d="M 44.234375 -99.5625 C 51.890625 -99.5625 58.609375 -97.773438 64.390625 -94.203125 C 70.171875 -90.628906 73.0625 -86.050781 73.0625 -80.46875 C 73.0625 -77.738281 72.28125 -75.5625 70.71875 -73.9375 C 69.164062 -72.3125 67.222656 -71.5 64.890625 -71.5 C 62.679688 -71.5 60.828125 -72.28125 59.328125 -73.84375 C 57.835938 -75.40625 57.09375 -77.222656 57.09375 -79.296875 C 57.09375 -81.503906 57.675781 -83.519531 58.84375 -85.34375 C 58.0625 -87.675781 56.367188 -89.554688 53.765625 -90.984375 C 51.171875 -92.421875 47.796875 -93.140625 43.640625 -93.140625 C 39.097656 -93.140625 34.972656 -91.675781 31.265625 -88.75 C 27.566406 -85.832031 25.71875 -82.164062 25.71875 -77.75 C 25.71875 -73.976562 27.40625 -70.597656 30.78125 -67.609375 C 34.15625 -64.617188 39.351562 -61.113281 46.375 -57.09375 C 52.21875 -53.707031 56.957031 -50.679688 60.59375 -48.015625 C 64.226562 -45.359375 67.3125 -42.210938 69.84375 -38.578125 C 72.382812 -34.941406 73.65625 -30.847656 73.65625 -26.296875 C 73.65625 -20.847656 72.128906 -15.976562 69.078125 -11.6875 C 66.023438 -7.40625 61.703125 -4.03125 56.109375 -1.5625 C 50.523438 0.90625 44.160156 2.140625 37.015625 2.140625 C 28.578125 2.140625 21.269531 0.257812 15.09375 -3.5 C 8.925781 -7.269531 5.84375 -12.335938 5.84375 -18.703125 C 5.84375 -21.429688 6.65625 -23.703125 8.28125 -25.515625 C 9.90625 -27.335938 11.882812 -28.25 14.21875 -28.25 C 16.6875 -28.25 18.632812 -27.4375 20.0625 -25.8125 C 21.5 -24.1875 22.21875 -22.269531 22.21875 -20.0625 C 22.21875 -17.851562 21.628906 -15.84375 20.453125 -14.03125 C 21.367188 -11.300781 23.382812 -9.125 26.5 -7.5 C 29.613281 -5.875 32.988281 -5.0625 36.625 -5.0625 C 43.507812 -5.0625 48.738281 -6.648438 52.3125 -9.828125 C 55.882812 -13.015625 57.671875 -17.597656 57.671875 -23.578125 C 57.671875 -27.859375 55.851562 -31.625 52.21875 -34.875 C 48.582031 -38.125 43.0625 -41.890625 35.65625 -46.171875 C 27.34375 -50.984375 21.070312 -55.335938 16.84375 -59.234375 C 12.625 -63.128906 10.515625 -67.804688 10.515625 -73.265625 C 10.515625 -77.941406 11.941406 -82.289062 14.796875 -86.3125 C 17.660156 -90.34375 21.65625 -93.554688 26.78125 -95.953125 C 31.914062 -98.359375 37.734375 -99.5625 44.234375 -99.5625 Z M 44.234375 -99.5625 "/></g></g></g></svg>
+            </span>
+            
+
+        </a>
+    </div>
+    
+    <div class="flex flex-1 items-center justify-between">
+        <nav class="flex space-x-3">
+
+            
+
+        </nav>
+        <nav class="hidden md:flex items-center space-x-5 md:ml-12 h-12">
+
+            
+            
+            
+  <a href="/ctf/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        CTF Writeups
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/htb/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        HTB Writeups
+    </p>
+</a>
+
+
+
+            
+            
+  <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        Tags
+    </p>
+</a>
+
+
+
+            
+            
+  <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+    
+    <p class="text-base font-medium" title="">
+        
+    </p>
+</a>
+
+
+
+            
+            
+
+            
+
+
+            
+            <button id="search-button" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+
+            
+            
+
+        </nav>
+        <div class="flex md:hidden items-center space-x-5 md:ml-12 h-12">
+
+            <span></span>
+
+            
+
+
+            
+            <button id="search-button-mobile" aria-label="Search" class="text-base hover:text-primary-600 dark:hover:text-primary-400"
+                title="">
+                
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+            </button>
+            
+
+            
+            
+
+        </div>
+    </div>
+    <div class="-my-2 -mr-2 md:hidden">
+
+        <label id="menu-button" class="block">
+            
+            <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+                
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+
+  </span>
+
+
+            </div>
+            <div id="menu-wrapper" style="padding-top:5px;"
+                class="fixed inset-0 z-30 invisible w-screen h-screen m-0 overflow-auto transition-opacity opacity-0 cursor-default bg-neutral-100/50 backdrop-blur-sm dark:bg-neutral-900/50">
+                <ul
+                    class="flex space-y-2 mt-3 flex-col items-end w-full px-6 py-6 mx-auto overflow-visible list-none ltr:text-right rtl:text-left max-w-7xl">
+
+                    <li id="menu-close-button">
+                        <span
+                            class="cursor-pointer inline-block align-text-bottom hover:text-primary-600 dark:hover:text-primary-400">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+</span>
+                    </li>
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/ctf/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            CTF Writeups
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/htb/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            HTB Writeups
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href="/tags/"  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            Tags
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                    
+  <li class="mt-1">
+    <a href=""  class="flex items-center text-gray-500 hover:text-primary-600 dark:hover:text-primary-400">
+        
+        <p class="text-bg font-bg" title="">
+            
+        </p>
+    </a>
+</li>
+
+
+
+
+                    
+
+                </ul>
+                
+                
+
+            </div>
+        </label>
+    </div>
+</div>
+
+
+
+
+<script>
+    (function () {
+        var $mainmenu = $('.main-menu');
+        var path = window.location.pathname;
+        $mainmenu.find('a[href="' + path + '"]').each(function (i, e) {
+            $(e).children('p').addClass('active');
+        });
+    })();
+</script>
+
+
+  </div>
+</div>
+<script>
+  window.addEventListener('scroll', function (e) {
+    var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var background_blur = document.getElementById('menu-blur');
+    background_blur.style.opacity = (scroll / 300);
+  });
+</script>
+
+  
+  <div class="relative flex flex-col grow">
+    <main id="main-content" class="grow">
+      
+
+
+<article>
+  
+  
+  
+  
+  
+  
+
+
+
+
+    
+    <div class="fixed inset-x-0 top-0 h-[800px] single_hero_background nozoom"
+    style="background-image:url(/ctf/aractf2025/a2s_3c/background_hu10091876274092533113.jpg);">
+    
+
+
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral dark:from-neutral-800 to-transparent mix-blend-normal">
+    </div>
+    <div
+        class="absolute inset-0 opacity-60 bg-gradient-to-t from-neutral dark:from-neutral-800 to-neutral-100 dark:to-neutral-800 mix-blend-normal">
+    </div>
+</div>
+
+<div id="background-blur" class="fixed opacity-0 inset-x-0 top-0 h-full single_hero_background nozoom backdrop-blur-2xl"></div>
+<script>
+    window.addEventListener('scroll', function (e) {
+        var scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        var background_blur = document.getElementById('background-blur');
+        background_blur.style.opacity = (scroll / 300)
+    });
+</script>
+
+  
+  
+
+  <header id="single_header" class="mt-5 max-w-prose">
+    
+    <ol class="text-sm text-neutral-500 dark:text-neutral-400 print:hidden">
+  
+  
+    
+  
+    
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/"
+      >Chrono Nexus</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline ">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/ctf/"
+      >CTF Writeups</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+  
+  <li class="inline hidden">
+    <a
+      class="hover:underline decoration-neutral-300 dark:underline-neutral-600"
+      href="/ctf/aractf2025/a2s_3c/"
+      >ARA CTF 6.0 2025 Finals: a2s 3c</a
+    ><span class="px-1 text-primary-500">/</span>
+  </li>
+
+</ol>
+
+
+    
+    <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      ARA CTF 6.0 2025 Finals: a2s 3c
+    </h1>
+    <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+      
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  <time datetime="2025-02-26T00:00:00&#43;00:00">26 February 2025</time><span class="px-2 text-primary-500">&middot;</span><span>1564 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">8 mins</span><span class="px-2 text-primary-500">&middot;</span>
+
+
+<script type="text/javascript" src="/js/zen-mode.min.63c8a202661f4a2063fdc2706685d668e8ea3da613da2224e9da527e5876e4f53dcac39ab60732626fb4151feae5d430d0cf44731e5d3c726522fcc1519c1547.js" integrity="sha512-Y8iiAmYfSiBj/cJwZoXWaOjqPaYT2iIk6dpSflh25PU9ysOatgcyYm&#43;0FR/q5dQw0M9Ecx5dPHJlIvzBUZwVRw=="></script>
+
+<span class="mb-[2px]">
+    <span id="zen-mode-button"
+          class="text-lg hover:text-primary-500"
+          title="Enable zen mode"
+          data-title-i18n-disable="Enable zen mode"
+          data-title-i18n-enable="Disable zen mode">
+        <span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px" height="50px">
+    <path fill="currentColor" d="M 12.980469 4 C 9.1204688 4 5.9804688 7.14 5.9804688 11 L 6 26 L 9.9804688 26 L 9.9804688 11 C 9.9804688 9.35 11.320469 8 12.980469 8 L 40.019531 8 C 41.679531 8 43.019531 9.35 43.019531 11 L 43.019531 39 C 43.019531 40.65 41.679531 42 40.019531 42 L 29 42 C 29 43.54 28.420938 44.94 27.460938 46 L 40.019531 46 C 43.879531 46 47.019531 42.86 47.019531 39 L 47.019531 11 C 47.019531 7.14 43.879531 4 40.019531 4 L 12.980469 4 z M 7 28 C 4.794 28 3 29.794 3 32 L 3 42 C 3 44.206 4.794 46 7 46 L 23 46 C 25.206 46 27 44.206 27 42 L 27 32 C 27 29.794 25.206 28 23 28 L 7 28 z M 7 32 L 23 32 L 23.001953 42 L 7 42 L 7 32 z"/>
+</svg>
+  </span>
+
+</span>
+    </span>
+</span>
+  
+
+  
+  
+</div>
+
+
+
+
+
+<div class="flex flex-row flex-wrap items-center">
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cryptography/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Cryptography
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/aes/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    AES
+  </span>
+</span>
+  </span>
+  
+  <span style="margin-top:0.5rem" class="mr-2" onclick="window.open(&#34;/tags/cryptanalysis/&#34;,'_self');return false;">
+    <span class="flex" style="cursor: pointer;">
+  <span class="rounded-md border border-primary-400 px-1 py-[1px] text-xs font-normal text-primary-700 dark:border-primary-600 dark:text-primary-400">
+    Cryptanalysis
+  </span>
+</span>
+  </span>
+  
+  
+  
+  
+</div>
+
+
+
+
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+
+    
+      
+      
+        
+        
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+        
+      
+      <img class="!mt-0 !mb-0 h-24 w-24 rounded-full ltr:mr-4 rtl:ml-4" width="96" height="96"
+      alt="chronopad" src="/img/profile_hu15980492075088713114.jpg" />
+    
+  
+  <div class="place-self-center">
+    
+    <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+      Author
+    </div>
+    <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+      chronopad
+    </div>
+    
+    
+    <div class="text-sm text-neutral-700 dark:text-neutral-400">Cybersecurity Student | CTF Player</div>
+    
+    <div class="text-2xl sm:text-lg">
+  <div class="flex flex-wrap text-neutral-400 dark:text-neutral-500">
+    
+      
+        <a
+          class="px-1 hover:text-primary-700 dark:hover:text-primary-400"
+          href="https://github.com/chronopad"
+          target="_blank"
+          aria-label="Github"
+          rel="me noopener noreferrer"
+          ><span class="inline-block align-text-bottom">
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+
+  </span>
+
+</span></a
+        >
+      
+    
+  </div>
+
+</div>
+  </div>
+</div>
+
+      
+
+      
+
+      
+      <div class="mb-5"></div>
+      
+
+    
+
+  </header>
+  
+  <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    
+     <div
+      class="order-first lg:ml-auto px-0 lg:order-last ltr:lg:pl-8 rtl:lg:pr-8">
+      <div class="toc ltr:pl-5 rtl:pr-5 print:hidden lg:sticky lg:top-[140px]">
+
+         <details open id="TOCView"
+  class="toc-right mt-0 overflow-y-scroll overscroll-contain scrollbar-thin scrollbar-track-neutral-200 scrollbar-thumb-neutral-400 dark:scrollbar-track-neutral-800 dark:scrollbar-thumb-neutral-600 rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 hidden lg:block">
+  <summary
+    class="block py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="min-w-[220px] py-2 border-dotted ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#decompiling-the-source">Decompiling the Source</a></li>
+                <li><a href="#understanding-the-challenge">Understanding the Challenge</a>
+                  <ul>
+                    <li><a href="#challenge-functions">Challenge Functions</a></li>
+                    <li><a href="#aes-in-a-nutshell">AES in a Nutshell</a></li>
+                    <li><a href="#the-vulnerability">The Vulnerability</a></li>
+                  </ul>
+                </li>
+                <li><a href="#attacking-the-cipher">Attacking the Cipher</a>
+                  <ul>
+                    <li><a href="#differential-cryptanalysis">Differential Cryptanalysis</a></li>
+                    <li><a href="#performing-the-attack">Performing the Attack</a></li>
+                  </ul>
+                </li>
+                <li><a href="#resources">Resources</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+<details class="toc-inside mt-0 overflow-hidden rounded-lg ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 lg:hidden">
+  <summary
+    class="py-1 text-lg font-semibold cursor-pointer bg-neutral-100 text-neutral-800 ltr:-ml-5 ltr:pl-5 rtl:-mr-5 rtl:pr-5 dark:bg-neutral-700 dark:text-neutral-100 lg:hidden">
+    Table of Contents
+  </summary>
+  <div
+    class="py-2 border-dotted border-neutral-300 ltr:-ml-5 ltr:border-l ltr:pl-5 rtl:-mr-5 rtl:border-r rtl:pr-5 dark:border-neutral-600">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#decompiling-the-source">Decompiling the Source</a></li>
+                <li><a href="#understanding-the-challenge">Understanding the Challenge</a>
+                  <ul>
+                    <li><a href="#challenge-functions">Challenge Functions</a></li>
+                    <li><a href="#aes-in-a-nutshell">AES in a Nutshell</a></li>
+                    <li><a href="#the-vulnerability">The Vulnerability</a></li>
+                  </ul>
+                </li>
+                <li><a href="#attacking-the-cipher">Attacking the Cipher</a>
+                  <ul>
+                    <li><a href="#differential-cryptanalysis">Differential Cryptanalysis</a></li>
+                    <li><a href="#performing-the-attack">Performing the Attack</a></li>
+                  </ul>
+                </li>
+                <li><a href="#resources">Resources</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</details>
+
+<script>
+
+  var margin = 200;
+  var marginError = 50;
+
+  (function () {
+    var $window = $(window);
+    var $toc = $('#TOCView');
+    var tocHeight = $toc.height();
+
+    function onResize() {
+      var windowAndMarginHeight = $window.height() - margin;
+      if(tocHeight >= windowAndMarginHeight) {
+        $toc.css("overflow-y", "scroll")
+        $toc.css("max-height", (windowAndMarginHeight + marginError) + "px")
+      } else {
+        $toc.css("overflow-y", "hidden")
+        $toc.css("max-height", "9999999px")
+      }
+    }
+
+    $window.on('resize', onResize);
+    $(document).ready(onResize);
+  })();
+
+
+
+  (function () {
+    var $toc = $('#TableOfContents');
+    if ($toc.length > 0) {
+      var $window = $(window);
+
+      function onScroll() {
+        var currentScroll = $window.scrollTop();
+        var h = $('.anchor');
+        var id = "";
+        h.each(function (i, e) {
+          e = $(e);
+          if (e.offset().top - $(window).height()/3 <= currentScroll) {
+            id = decodeURIComponent(e.attr('id'));
+          }
+        });
+        var active = $toc.find('a.active');      
+        if (active.length == 1 && active.eq(0).attr('href') == '#' + id) return true;
+
+        active.each(function (i, e) {
+          
+            $(e).removeClass('active');
+          
+        });
+        $toc.find('a[href="#' + id + '"]').addClass('active')
+        $toc.find('a[href="#' + id + '"]').parentsUntil('#TableOfContents').each(function (i, e) {
+          $(e).children('a').parents('ul').show();          
+        });
+      }
+
+      $window.on('scroll', onScroll);
+      $(document).ready(function () {
+        
+        onScroll();
+      });
+    }
+  })();
+
+
+</script>
+   </div>
+      </div>
+      
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+        
+
+
+        <div class="article-content max-w-prose mb-20">
+          
+
+<h5 class="relative group">Decompiling the Source 
+    <div id="decompiling-the-source" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#decompiling-the-source" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+<p>Challenge files: <a href="https://github.com/chronopad/chrono-archive/tree/main/ctftime/KashiCTF_2025/misc/Broken" target="_blank">here</a></p>
+<p>In this challenge, we are provided with <em>chall.zip</em>, <em>out.txt</em>, and <em>pairs.txt</em>. The zip archive contains <em>chall.cpython-311.pyc</em>, <em>utils.cpython-311.pyc</em>, <em>aes.cpython-311.pyc</em>.</p>
+<p>The challenge source code is compiled Python, which can be decompiled with <a href="https://pylingual.io/" target="_blank">https://pylingual.io/</a>. The decompiled code shows obfuscated variable name, so I asked ChatGPT to change the variable names into a more readable format.</p>
+
+
+<h5 class="relative group">Understanding the Challenge 
+    <div id="understanding-the-challenge" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#understanding-the-challenge" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+
+
+<h6 class="relative group">Challenge Functions 
+    <div id="challenge-functions" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#challenge-functions" aria-label="Anchor">#</a>
+    </span>        
+    
+</h6>
+<p>One of the given files is the source code for AES implementation. This usually hints that the AES used is customized (a non-standard AES).</p>
+<p>The challenge starts with generating a random 16 bytes key for AES and calls the function <code>generate_encryption_pairs()</code>. This function creates five blocks with the length of 16 bytes, where the first 4 bytes of each blocks are unique random bytes and the remaining 12 bytes of the blocks are null bytes. It will then encrypt the blocks with <code>custom_encrypt()</code> function. The raw blocks and encrypted blocks are then used to create the encryption pairs.</p>
+<pre tabindex="0"><code># Example of a single encryption pair
+
+176a3336000000000000000000000000
+56d32528000000000000000000000000
+a6830b1a039cf44917aba0318057cea5
+50cfdab0b57af032d3c5bd76077a305d
+</code></pre><p>The <code>custom_encrypt()</code> function starts by creating an instance of the <code>AES</code> class, passing <code>KEY</code> and <code>2</code> as parameters. The <code>2</code> here shouldn&rsquo;t exist in regular AES implementation, so that&rsquo;s something that we should take a look on. After creating the instance, it encrypts the block normally with AES, followed by <code>add_round_key()</code>, <code>mix_columns()</code>, and <code>add_round key()</code> again, then it returns the resulting block.</p>
+
+
+<h6 class="relative group">AES in a Nutshell 
+    <div id="aes-in-a-nutshell" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#aes-in-a-nutshell" aria-label="Anchor">#</a>
+    </span>        
+    
+</h6>
+<p>Here&rsquo;s how AES encryption works in a nutshell:</p>
+<ul>
+<li>The master key of AES is expanded into multiple round keys using AES key schedule.</li>
+<li>There are four main functions.
+<ul>
+<li><code>AddRoundKey</code>, where the state is XOR-ed with the round key.</li>
+<li><code>SubBytes</code>, where each byte of the state is replaced with another byte based on a lookup table.</li>
+<li><code>ShiftRows</code>, where the rows are shifted based on their position, second row shifted by 1, third row by 2, and last row by 3.</li>
+<li><code>MixColumns</code>, where the four bytes of each column are combined and mixed together,</li>
+</ul>
+</li>
+<li>The first phase is <strong>pre-whitening</strong>, which is done by performing <code>AddRoundKey</code>.</li>
+<li>After the first phase, there will be <code>n-1</code> rounds done for <code>n</code> is the number of AES rounds. For each round, these steps will be performed sequentially: <code>SubBytes</code> &gt; <code>ShiftRows</code> &gt; <code>MixColumns &gt; AddRoundKey</code>. This is called as full round.</li>
+<li>After it is done, a final round takes place where the steps are the same except that now there is no <code>MixColumns</code>: <code>SubBytes</code> &gt; <code>ShiftRows</code> &gt; <code>AddRoundKey</code>. This is also called as half-round.</li>
+</ul>
+
+
+<h6 class="relative group">The Vulnerability 
+    <div id="the-vulnerability" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#the-vulnerability" aria-label="Anchor">#</a>
+    </span>        
+    
+</h6>
+<p>The first unique thing in the encryption here is the creation of the AES instance with <code>AES(KEY, 2)</code>. If we take a look at the decompiled code, we can see that <code>2</code> stands for the number of rounds. A normal 128-bit (16 bytes) AES will do 10 rounds, but in this one only 2 happens. Also since the custom encryption function adds <code>AddRoundKey</code> &gt; <code>MixColumns</code> &gt; <code>AddRoundKey</code> on top of the encryption, the final round which is usually a half round became a full round instead.</p>
+<p>Based on the information, we can conclude that the AES encryption uses only 2 full rounds of encryption instead of the standard 10 rounds (9 full + 1 half). This means that the encrypted block of AES is not mixed properly yet, allowing us to perform Linear and Differential Cryptanalysis which allows us to retrieve the AES master key.</p>
+
+
+<h5 class="relative group">Attacking the Cipher 
+    <div id="attacking-the-cipher" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#attacking-the-cipher" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+
+
+<h6 class="relative group">Differential Cryptanalysis 
+    <div id="differential-cryptanalysis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#differential-cryptanalysis" aria-label="Anchor">#</a>
+    </span>        
+    
+</h6>
+<p>I browsed around for possible attacks on low round AES and I found <a href="https://www.davidwong.fr/blockbreakers/" target="_blank">BlockBreakers</a> by David Wong which shows an attack called Square attack for breaking 4-6 rounds of AES. However, this is not the one I am looking for and I was unable to solve this challenge during the time limit (so this is an up-solve).</p>
+<p>After the competition, found that the keyword &ldquo;AES low round attack&rdquo; leads to <a href="https://merri.cx/adventure-of-aes/" target="_blank">this blog</a> by Merricx that shows the exact attack that I need. The blog explains about how to break 1 to 3-round AES, which includes Differential chosen-plaintext attack to break two full rounds of AES.</p>
+<p>The attack used is a chosen-plaintext attack because we need the plaintext differential where the first column is non-zero differential and the rest are zero differential, which is quite specific. Thankfully the plaintext-ciphertext pairs given in <em>pairs.txt</em> already fit this criteria, where the first four bytes (first column) are random bytes and the remaining bytes are null bytes (00). This means that this must be the correct attack.</p>
+
+
+<h6 class="relative group">Performing the Attack 
+    <div id="performing-the-attack" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#performing-the-attack" aria-label="Anchor">#</a>
+    </span>        
+    
+</h6>
+<p>Since I can&rsquo;t explain the attack better than the original blog by Merricx, which contains a really good explanation already, I&rsquo;ll go straight to attacking it. This part is really simple because apparently the blog provides the Python implementation of the attack found <a href="https://github.com/Merricx/aes-attack" target="_blank">here</a> as <em>round2-full-impossible-diff.py</em>, which is an Impossible Differential chosen-plaintext attack that requires five plaintext-ciphertext pairs, exactly what we have right now.</p>
+<p>After a slight modification to the script to parse the plaintext-ciphertext pairs and also to decrypt with the obtained key, we should be able to get the flag.</p>
+<pre tabindex="0"><code>import os, random
+from Crypto.Util.strxor import strxor
+from itertools import product
+from aes import AES
+from utils import *
+
+#KEY = b&#34;\x2B\x7E\x15\x16\x28\xAE\xD2\xA6\xAB\xF7\x15\x88\x09\xCF\x4F\x3C&#34;
+KEY = os.urandom(16)
+
+# Encryption oracle
+def encrypt(plaintext):
+    aes = AES(KEY, 2)
+    key_expand = aes._key_matrices
+
+    state = aes.encrypt_block(plaintext)
+    state = bytes2matrix(state)
+    add_round_key(state, key_expand[-1])
+    mix_columns(state)
+    add_round_key(state, key_expand[-1])
+    
+    return matrix2bytes(state)
+
+# Decryption check
+def decrypt(ciphertext, key):
+    aes = AES(key, 2)
+    key_expand = aes._key_matrices
+    state = bytes2matrix(ciphertext)
+    add_round_key(state, key_expand[-1])
+    inv_mix_columns(state)
+    add_round_key(state, key_expand[-1])
+
+    return aes.decrypt_block(matrix2bytes(state))
+
+
+def generate_sbox_different_distribution_table():
+    table = {}
+    for i in range(256):
+        for j in range(256):
+            diff = i ^ j
+            diff_sbox = sbox[i] ^ sbox[j]
+
+            if diff in table:
+                if diff_sbox not in table[diff]:
+                    table[diff].append(diff_sbox)
+            else:
+                table[diff] = [diff_sbox]
+
+    return table
+
+# Inverse state from ciphertext to start of Round 2 
+def inv_last_round(s, k):
+    state = bytes2matrix(s)
+    round_key = bytes2matrix(k)
+    inv_mix_columns(state)
+    add_round_key(state, round_key)
+    inv_shift_rows(state)
+    inv_sub_bytes(state)
+
+    return matrix2bytes(state)
+
+def mix_columns_key(round_key):
+    state = bytes2matrix(round_key)
+    mix_columns(state)
+
+    return matrix2bytes(state)
+
+# Generate list impossible state at the end of round 1 based from SBOX Different Distribution Table
+def generate_impossible_state(differential):
+    impossible = []
+    for i in range(4):
+        impossible.append([])
+        for j in range(256):
+            if j not in sbox_ddt[differential[i]]:
+                impossible[i].append(j)
+
+    impossible_state = []
+    for i in range(4):
+        
+        for j in impossible[i]:
+            state = bytes2matrix(b&#39;\x00&#39;*(i) + bytes([j]) + b&#39;\x00&#39;*(15-i))
+            shift_rows(state)
+            mix_columns(state)
+            impossible_state.append(matrix2bytes(state))
+            
+    return impossible_state
+
+def generate_256_list():
+    result = []
+    for i in range(256):
+        result.append(i)
+
+    return result
+
+# Generate 5 chosen-plaintext such that each of their differential byte is unique
+# So we can make 10 differential pairs from only 5 chosen-plaintext
+def generate_sample_pair(n=5):
+
+    while True:
+        bs = []
+        for i in range(n):
+            bs.append(os.urandom(4))
+
+        is_unique = True
+        for i in range(4):
+            exclude = []
+            for j in range(n-1):
+                for k in range(j+1, n):
+                    check = bs[j][i] ^ bs[k][i]
+                    if check not in exclude:
+                        exclude.append(check)
+                    else:
+                        is_unique = False
+
+        if is_unique:
+            pairs = []
+            ctx = []
+
+            # Calls encryption oracle
+            for i in range(n):
+                p = bytes(bs[i]) + b&#39;\x00&#39;*12
+                ctx.append(encrypt(p))
+
+            for i in range(n-1):
+                for j in range(i+1, n):
+                    p1 = bytes(bs[i]) + b&#39;\x00&#39;*12
+                    p2 = bytes(bs[j]) + b&#39;\x00&#39;*12
+                    pairs.append([p1, p2, ctx[i], ctx[j]])
+
+            return pairs
+
+# ShiftRows 1 round
+shifted_round1 = [0, 5, 10, 15, 4, 9, 14, 3, 8, 13, 2, 7, 12, 1, 6, 11]
+
+# Generate Sbox Different Distribution Table
+sbox_ddt = generate_sbox_different_distribution_table()
+
+# Generate random sample of chosen-plaintext pairs that has unique XOR difference
+print(&#34;[+] Retrieve 5 plaintext-ciphertext pairs from encryption oracle...&#34;)
+# test_pair = generate_sample_pair()
+test_pair = [[bytes.fromhex(block) for block in pair.split(&#34;\n&#34;)] for pair in open(&#34;../src/pairs.txt&#34;).read().split(&#34;\n\n&#34;)[:-1]]
+
+impossible_key = [None] * 16
+
+# Iterate over sample of chosen-plaintext
+for plaintext1, plaintext2, ciphertext1, ciphertext2 in test_pair:
+
+    print(&#34;[+] Checking impossible state from differential pair...&#34;)
+
+    # Calculate XOR difference of plaintext and differential ciphertext 
+    plain_diff = xor(plaintext1, plaintext2)
+    enc_diff = xor(ciphertext1, ciphertext2)
+
+
+    # Generate impossible start of round 2 state from pair sample
+    impossible_state = generate_impossible_state(plain_diff)
+
+    # Brute-force last round key one byte at time by comparing against impossible_state
+    for i in range(16):
+        if impossible_key[i] is None:
+            impossible_key[i] = []
+
+        shifted_index = shifted_round1[i]
+        for j in range(256):
+            if j in impossible_key[i]:
+                continue
+
+            # Inverse ciphertext to start of round 2 (ciphertext -&gt; AddRoundKey -&gt; InvShiftRows -&gt; InvSubBytes)
+            guess_key = b&#39;\x00&#39;*(i) + bytes([j]) + b&#39;\x00&#39;*(15-i)
+            inv_a = inv_last_round(ciphertext1, guess_key)
+            inv_b = inv_last_round(ciphertext2, guess_key)
+            inv_diff = xor(inv_a, inv_b)
+            
+            # Check if inv_diff contained in one of impossible_state
+            for k in impossible_state:
+                if inv_diff[shifted_index] == k[shifted_index]:
+                    impossible_key[i].append(j)
+
+# Get possible_key by substracting all 256 possible value with impossible_key
+list_256 = generate_256_list()
+possible_key = []
+for imp_key in impossible_key:
+    possible_key.append(list(set(list_256) - set(imp_key)))
+
+all_possible_key = product(*possible_key)
+
+# Enumerate all remaining possible_key
+ciphertext_check = ciphertext1
+for possible_round_key in all_possible_key:
+    
+    mixed_key = mix_columns_key(possible_round_key)
+    master_key = inv_key_expansion(list(mixed_key), 2)
+    
+    decrypt_check = decrypt(ciphertext_check, master_key)
+    if decrypt_check == test_pair[-1][0]:
+        print(&#39;[+] Possible Master Key:&#39;, master_key)
+
+        encs = [bytes.fromhex(enc) for enc in open(&#34;../src/out.txt&#34;).read().split(&#34;\n&#34;)]
+        pts = [decrypt(enc, master_key) for enc in encs]
+        print(&#34;[+] Flag:&#34;, b&#39;&#39;.join(pts))
+        break
+</code></pre><pre tabindex="0"><code>┌──(chronopad㉿VincentXPS)-[~/Documents/ctf2025/AraCTF-Finals_2025/a2s-upsolve/aes-attack]
+└─$ python3 round2-full-impossible-diff.py
+[+] Retrieve 5 plaintext-ciphertext pairs from encryption oracle...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Checking impossible state from differential pair...
+[+] Possible Master Key: b&#39;\xc3\x01\xa7\xd71\xe1O\xd1y\xf5Tm\x1c\xb95\xae&#39;
+[+] Flag: b&#39;ARA6{2rounds_of_AES_arent_enough_hmmmm_maybe_3?}&#39;
+</code></pre><p>Flag: <code>ARA6{2rounds_of_AES_arent_enough_hmmmm_maybe_3?}</code></p>
+
+
+<h5 class="relative group">Resources 
+    <div id="resources" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 ltr:-left-6 rtl:-right-6 not-prose group-hover:opacity-100">
+        <a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700"
+            style="text-decoration-line: none !important;" href="#resources" aria-label="Anchor">#</a>
+    </span>        
+    
+</h5>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">https://en.wikipedia.org/wiki/Advanced_Encryption_Standard</a></li>
+<li><a href="https://www.davidwong.fr/blockbreakers/aes_10_encryption.html" target="_blank">https://www.davidwong.fr/blockbreakers/aes_10_encryption.html</a></li>
+<li><a href="https://merri.cx/adventure-of-aes/" target="_blank">https://merri.cx/adventure-of-aes/</a></li>
+<li><a href="https://github.com/Merricx/aes-attack" target="_blank">https://github.com/Merricx/aes-attack</a></li>
+</ul>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+        
+
+          
+      </div>
+     
+      
+      
+        
+        
+          
+          
+        
+      <script>
+        var oid = "views_ctf\/aractf2025\/a2s_3c\/index.md"
+        var oid_likes = "likes_ctf\/aractf2025\/a2s_3c\/index.md"
+      </script>
+      
+      
+      <script type="text/javascript" src="/js/page.min.0860cf4e04fa2d72cc33ddba263083464d48f67de06114529043cb4623319efed4f484fd7f1730df5abea0e2da6f3538855634081d02f2d6e920b956f063e823.js" integrity="sha512-CGDPTgT6LXLMM926JjCDRk1I9n3gYRRSkEPLRiMxnv7U9IT9fxcw31q&#43;oOLabzU4hVY0CB0C8tbpILlW8GPoIw=="></script>
+      
+  
+    </section>
+  <footer class="pt-8 max-w-prose print:hidden">
+
+    
+  
+
+
+    
+  </footer>
+</article>
+
+      <div id="top-scroller" class="pointer-events-none absolute top-[110vh] bottom-0 w-12 ltr:right-0 rtl:left-0">
+  <a href="#the-top"
+    class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 mb-16 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top" title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+    </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+    <nav class="flex flex-row pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400">
+      <ul class="flex flex-col list-none sm:flex-row">
+        
+        <li class="flex mb-1 ltr:text-right rtl:text-left sm:mb-0 ltr:sm:mr-7 ltr:sm:last:mr-0 rtl:sm:ml-7 rtl:sm:last:ml-0">
+          <a class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 flex items-center" href=""
+            title="">
+            
+            
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+    
+  
+  <div class="flex items-center justify-between">
+
+    
+    
+    <p class="text-sm text-neutral-500 dark:text-neutral-400">
+      2025 - the one and only chronopad
+    </p>
+    
+
+    
+    
+    <p class="text-xs text-neutral-500 dark:text-neutral-400">
+      
+      
+      Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+        href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+    </p>
+    
+
+  </div>
+  <script>
+    
+    mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+      margin: 24,
+      background: 'rgba(0,0,0,0.5)',
+      scrollOffset: 0,
+    })
+    
+  </script>
+  
+  
+  <script type="text/javascript" src="/js/process.min.ee03488f19c93c2efb199e2e3014ea5f3cb2ce7d45154adb3399a158cac27ca52831db249ede5bb602700ef87eb02434139de0858af1818ab0fb4182472204a4.js" integrity="sha512-7gNIjxnJPC77GZ4uMBTqXzyyzn1FFUrbM5mhWMrCfKUoMdsknt5btgJwDvh&#43;sCQ0E53ghYrxgYqw&#43;0GCRyIEpA=="></script>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh]"
+  data-url="//localhost:1313/"
+  style="z-index:500"
+>
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800"
+  >
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          
+
+  <span class="relative block icon">
+    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+
+  </span>
+
+
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0"
+        />
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)"
+      >
+        
+
+  <span class="relative block icon">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+
+  </span>
+
+
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+  </div>
+</body>
+
+</html>
