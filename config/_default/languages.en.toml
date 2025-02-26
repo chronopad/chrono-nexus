@@ -11,5 +11,5 @@ rtl = false
 dateFormat = "2 January 2006"
 description = "Personal blog of chronopad: Writeups and more!"
 author = { image = "img/profile.jpg", name = "chronopad", bio = "Cybersecurity Student | CTF Player", headline = "Cybersecurity Student | CTF Player", links = [ { github = "https://github.com/chronopad" } ] }
-logo = "img/NexusLogo.svg"
+logo = "img/NexusLogoSlim.svg"
 copyright = "2025 - the one and only chronopad"
