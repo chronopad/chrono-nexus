@@ -19,5 +19,15 @@
       <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/aractf2025/a2s_3c/featured.svg" />
     </item>
     
+    <item>
+      <title>Cyber Jawara National 2024: Class Select</title>
+      <link>//localhost:1313/ctf/cj2024/class_select/</link>
+      <pubDate>Sun, 12 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/ctf/cj2024/class_select/</guid>
+      <description>Abusing the encryption of other AES modes to break AES OFB mode.</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/cj2024/class_select/featured.svg" />
+    </item>
+    
   </channel>
 </rss>
