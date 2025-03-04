@@ -10,7 +10,7 @@ tags:
 category: Cryptography
 ---
 ##### Decompiling the Source
-Challenge files: [here](https://github.com/chronopad/chrono-archive/tree/main/ctftime/KashiCTF_2025/misc/Broken)
+Challenge files: [here](https://github.com/chronopad/chrono-archive/tree/main/national/ARACTF6.0-Finals_2025/Cryptography/a2s%203c)
 
 In this challenge, we are provided with *chall.zip*, *out.txt*, and *pairs.txt*. The zip archive contains *chall.cpython-311.pyc*, *utils.cpython-311.pyc*, *aes.cpython-311.pyc*. 
 
