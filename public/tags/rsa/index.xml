@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RSA on Chrono Nexus</title>
+    <link>//localhost:1313/tags/rsa/</link>
+    <description>Recent content in RSA on Chrono Nexus</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2025 - chronopad</copyright>
+    <lastBuildDate>Sun, 09 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="//localhost:1313/tags/rsa/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Pearl CTF 2025: Encryption Oracle</title>
+      <link>//localhost:1313/ctf/pearlctf2025/encryption_oracle/</link>
+      <pubDate>Sun, 09 Mar 2025 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/ctf/pearlctf2025/encryption_oracle/</guid>
+      <description>Public modulus and public exponent recovery, factoring the public modulus from leak: d mod (p-1).</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="//localhost:1313/ctf/pearlctf2025/encryption_oracle/featured.svg" />
+    </item>
+    
+  </channel>
+</rss>
